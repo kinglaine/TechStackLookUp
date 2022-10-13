@@ -1,6 +1,8 @@
 body{
     background-color: rgb(112, 112, 112);
     overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
     margin-left: 0%;
     margin-right: 0%;
 }
@@ -33,18 +35,25 @@ body{
     width: 100%;
     text-align: center;
     position: fixed;
-    top: 30%;
+    top: 20%;
     
 }
-form{
-    display: inline;
-}
+
 #loop{
    position: relative;
 }
 #searchBar:hover::after{
    content: "Company.com or Company name";
 }
+#searchBar::after{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    overflow-x: hidden;
+ }
 
 #input{
     margin-bottom: 1%;
@@ -109,3 +118,12 @@ form{
 #closeModal:hover{
     background-color: rgb(214, 214, 214);
 }
+#techStacks{
+    border: 3px solid black;
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
