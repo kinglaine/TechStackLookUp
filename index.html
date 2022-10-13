@@ -8,12 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <span id="about">About</span>
+    <span id="about" onclick="showAbout()">About</span>
     <div id="searchBar">
         <h1 id="name">STacK LookUP</h1>
         <span id="loop"><img src="loop.svg"></span>
         <input type="text" id="input">
-        <button onclick="searchStack()" id="searchButton">search</button>
+        <button onclick="" id="searchButton">search</button>
+    </div>
+    <div id="modalContainer">
+        <div id="modalWindow">
+            <h1>Hi!</h1>
+            <p>I know how difficult it can be to prepare for your tech interviews. <strong>Stack lookup</strong>
+            will be your best friend during that period, use it to know more what technology any company is using.</p>
+            <button id="closeModal" onclick="HideAbout()">close</button>
+        </div>
     </div>
     <div id="copyright">
         <span>NOTE. All information and materials used are ONLY for educational purposes.</span>

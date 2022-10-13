@@ -1,11 +1,16 @@
 body{
     background-color: rgb(112, 112, 112);
     overflow-x: hidden;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 #about{
     font-weight: bold;
     margin-left: 1%;
     cursor: pointer;
+}
+#about:hover{
+    color: grey;
 }
 #copyright{
     position: absolute;
@@ -66,4 +71,40 @@ body{
     text-align: center;
     margin: auto;
     margin-top: 1%;
+}
+
+#modalContainer{
+    position: fixed;
+    background-color: rgba(87, 83, 83, 0.719);
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    display: none;
+}
+#modalWindow{
+    background-color:white;
+    position: relative;
+    top: 30%;
+    margin: auto;
+    width: 50%;
+    height: fit-content;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 1%;
+}
+#modalWindow p{
+    padding: 2%;
+}
+#modalWindow h1{
+    padding: 2%;
+}
+#closeModal{
+    cursor: pointer;
+    min-width: 80px;
+    width: fit-content;
+    border: none;
+    background-color: rgba(214, 214, 214, 0.582);
+}
+#closeModal:hover{
+    background-color: rgb(214, 214, 214);
 }

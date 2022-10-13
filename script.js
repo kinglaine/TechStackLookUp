@@ -1,3 +1,11 @@
+//functions to show and hide modals
+const openAbout = document.getElementById("modalContainer");
+function showAbout(){
+    openAbout.style.display = "block";
+}
+function HideAbout(){
+    openAbout.style.display = "none";
+}
 
  function searchStack(){
     let domain = document.getElementById('input').value;
