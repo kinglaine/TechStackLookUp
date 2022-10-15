@@ -1,5 +1,5 @@
 //functions to show and hide modals
-ProcessingInstruction.env
+
 const openAbout = document.getElementById("modalContainer");
 function showAbout(){
     openAbout.style.display = "block";
@@ -26,7 +26,7 @@ function searchStack(){
     method:'POST',
     headers: { 
         'Content-Type': 'application/json',
-        'x-api-key': 'sLnPJervnfsXQfay7sOzYw'
+        'x-api-key': 'gi'
      },
     body: JSON.stringify({
         query: `
