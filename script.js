@@ -9,8 +9,14 @@ function HideAbout(){
 function clearBox(elementID){
     document.getElementById(elementID).innerHTML = "";
 }
-// search logic 
+
+// search logic with domain name
 function searchStack(){
+    //check if field is empty
+    var value = document.getElementById("input").value;
+    if (value === '') {
+      alert("Please enter company domain name or company name");
+    }
     //reset stack view whenever button is click
     document.getElementById("stack").innerHTML = "";
     let domain = document.getElementById('input').value;
