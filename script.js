@@ -6,10 +6,16 @@ function showAbout(){
 function HideAbout(){
     openAbout.style.display = "none";
 }
-
- function searchStack(){
+function clearBox(elementID){
+    document.getElementById(elementID).innerHTML = "";
+}
+// search logic 
+function searchStack(){
+    //reset stack view whenever button is click
+    document.getElementById("stack").innerHTML = "";
     let domain = document.getElementById('input').value;
-     fetch ('https://api.stackshare.io/graphql' , {
+    // retrieve data from stackshare
+    fetch ('https://api.stackshare.io/graphql' , {
     method:'POST',
     headers: { 
         'Content-Type': 'application/json',
@@ -24,8 +30,10 @@ function HideAbout(){
                     edges {
                     node {
                         tool {
-                        name
-                        imageUrl
+                            name
+                            imageUrl
+                            ossRepo
+                            websiteUrl
                         }
                     }
                     }
@@ -36,13 +44,37 @@ function HideAbout(){
         `
     })
 
-}).then(res => res.json())
-  .then(data => {
-    let size = data.data.enrichment.companyTools.count;
-    for(let i = 0; i <= size; i++){
-            console.log(data.data.enrichment.companyTools.edges[i].node.tool.name);
-            console.log(data.data.enrichment.companyTools.edges[i].node.tool.imageUrl);
-    }
-         
-  })
+    }).then(res => res.json())
+        .then(data => {
+            let names;
+            let logoWebsite;
+            var stack_logos = new Array();
+            var logo_title = new Array();
+            var logo_site = new Array();
+            let i = 0;
+            while(data.data.enrichment.companyTools.edges[i] !== undefined){
+                let logo = data.data.enrichment.companyTools.edges[i].node.tool.imageUrl;
+                 names = data.data.enrichment.companyTools.edges[i].node.tool.name;
+                stack_logos[i] = logo;
+                logo_title[i] = names;
+                //document.getElementById('stackname').innerHTML = `${data.data.enrichment.companyTools.edges[i].node.tool.name}`;
+                    console.log(data.data.enrichment.companyTools.edges[i].node.tool.name);
+                    console.log(data.data.enrichment.companyTools.edges[i].node.tool.imageUrl);
+                    console.log(i);
+                    i++;
+            }
+            let j = 0;
+            stack_logos.forEach(src => {
+                const img = document.createElement("img");
+                img.style.width = "50px";
+                img.style.height = "50px";
+                img.src = src;
+                img.title = logo_title[j]; // To tell them apart.
+                document.getElementById("stack").appendChild(img);
+                j++
+            })
+        
+    }).catch(e => {
+            console.log(e);
+    });
 }

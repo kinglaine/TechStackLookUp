@@ -121,14 +121,28 @@ body{
 #closeModal:hover{
     background-color: rgb(214, 214, 214);
 }
-#techStacks{
-    border: 3px solid black;
+.techStacks{
     width: 50%;
     height: 40%;
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 25%;
     overflow-x: hidden;
     overflow-y: auto;
 }
+#stack{
+    display: flexbox;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 1%;
+}
 
+
+ #stack img {
+    border-radius: 10px;
+    border: 2px solid rgb(88, 84, 84);
+    padding: 1%;
+    margin: 1%;
+    
+}
