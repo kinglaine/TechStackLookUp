@@ -1,5 +1,6 @@
+require('dotenv').config();
+console.log(process.env);
 //functions to show and hide modals
-
 const openAbout = document.getElementById("modalContainer");
 function showAbout(){
     openAbout.style.display = "block";
@@ -26,7 +27,7 @@ function searchStack(){
     method:'POST',
     headers: { 
         'Content-Type': 'application/json',
-        'x-api-key': 'gi'
+        'x-api-key': `${api_key}`
      },
     body: JSON.stringify({
         query: `
@@ -49,7 +50,9 @@ function searchStack(){
                 
             }  
         `
+        
     })
+    
 
     }).then(res => res.json())
         .then(data => {
