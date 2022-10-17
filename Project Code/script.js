@@ -27,11 +27,7 @@ function searchStack(){
     method:'POST',
     headers: { 
         'Content-Type': 'application/json',
-<<<<<<< HEAD
         'x-api-key': 'sLnPJervnfsXQfay7sOzYw',
-=======
-        'x-api-key': `${api_key}`
->>>>>>> ba02711b0524fbf053d6e0e1ae43417de1fc43e4
      },
     body: JSON.stringify({
         query: `
