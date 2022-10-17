@@ -25,7 +25,7 @@ function searchStack(){
     method:'POST',
     headers: { 
         'Content-Type': 'application/json',
-        'x-api-key': 'sLnPJervnfsXQfay7sOzYw'
+        'x-api-key': 'sLnPJervnfsXQfay7sOzYw',
      },
     body: JSON.stringify({
         query: `
@@ -48,7 +48,9 @@ function searchStack(){
                 
             }  
         `
+        
     })
+    
 
     }).then(res => res.json())
         .then(data => {

@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "name": "techstacklookup",
+  "description": "Rest api project that let user look for company tech stack with the domain name of the company or company name",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinglaine/TechStackLookUp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kinglaine/TechStackLookUp/issues"
+  },
+  "homepage": "https://github.com/kinglaine/TechStackLookUp#readme"
+}
