@@ -1,5 +1,3 @@
-require('dotenv').config();
-console.log(process.env);
 //functions to show and hide modals
 const openAbout = document.getElementById("modalContainer");
 function showAbout(){
