@@ -182,3 +182,10 @@ function searchStack(){
         searchWithName();
     }
 }
+//check if enter button is press
+var input = document.getElementById("input");
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      searchStack();
+    }
+  });
