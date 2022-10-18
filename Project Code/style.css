@@ -6,6 +6,7 @@ body{
     margin-left: 0%;
     margin-right: 0%;
 }
+
 #about{
     font-weight: bold;
     margin-left: 1%;
@@ -43,7 +44,7 @@ body{
    position: relative;
 }
 #searchBar:hover::after{
-   content: "Company.com or Company name";
+   content: "Company.com";
 }
 #searchBar::after{
     position: absolute;
@@ -131,17 +132,14 @@ body{
     position: absolute;
     top: 47%;
     left: 25%;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 #stack{
-    display: -webkit-inline-flex;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
+    display: flex;
+    width: 100%;
+    height: 50%;
     padding: 1%;
-    word-wrap: break-word;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 
