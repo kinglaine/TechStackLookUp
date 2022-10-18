@@ -135,12 +135,14 @@ body{
     overflow-y: auto;
 }
 #stack{
-    display: flexbox;
+    display: -webkit-inline-flex;
     justify-content: center;
     width: fit-content;
     height: fit-content;
     padding: 1%;
     cursor: pointer;
+    word-wrap: break-word;
+    overflow: auto;
 }
 
 

@@ -74,15 +74,23 @@ function searchWithDomain(){
         }
         let j = 0;
         stack_logos.forEach(src => {
+            var container = document.createElement('div');
+            container.style.width = "50px";
+            container.style.padding = "2%";
             var img = document.createElement('img');
             var newAnchor = document.createElement('a');
+            var name = document.createElement('p');
+            name.style.textAlign = "center";
+            name.innerHTML = logo_title[j]; 
             newAnchor.href = logo_link[j];
             newAnchor.target = "_blank"
             img.style.width = "50px";
             img.style.height = "50px";
             img.src = src;
             img.title = logo_title[j]; // To tell them apart.
-            document.getElementById("stack").appendChild(newAnchor).appendChild(img);
+            document.getElementById("stack").appendChild(container).appendChild(newAnchor).appendChild(img);
+            container.appendChild(name);
+            
             j++
         })
     
