@@ -140,6 +140,7 @@ body{
     width: fit-content;
     height: fit-content;
     padding: 1%;
+    cursor: pointer;
 }
 
 
@@ -149,4 +150,11 @@ body{
     padding: 1%;
     margin: 1%;
     
+}
+#toolName{
+    display: block;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 8%;
 }
