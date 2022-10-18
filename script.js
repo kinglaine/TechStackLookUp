@@ -53,14 +53,17 @@ function searchWithDomain(){
         var stack_logos = new Array();
         var logo_title = new Array();
         var logo_link = new Array();
+        var gitHub_link = new Array();
         let i = 0;
         while(data.data.enrichment.companyTools.edges[i] !== undefined){
             let logo = data.data.enrichment.companyTools.edges[i].node.tool.imageUrl;
             let names = data.data.enrichment.companyTools.edges[i].node.tool.name;
             let link = data.data.enrichment.companyTools.edges[i].node.tool.websiteUrl;
+            let github = data.data.enrichment.companyTools.edges[i].node.tool.ossRepo;
             stack_logos[i] = logo;
             logo_title[i] = names;
             logo_link[i] = link;
+            gitHub_link[i] = github;
             //document.getElementById('stackname').innerHTML = `${data.data.enrichment.companyTools.edges[i].node.tool.name}`;
                 console.log(data.data.enrichment.companyTools.edges[i].node.tool.name);
                 console.log(data.data.enrichment.companyTools.edges[i].node.tool.imageUrl);
@@ -77,7 +80,13 @@ function searchWithDomain(){
             img.style.cursor = "grab";
             var newAnchor = document.createElement('a');
             var name = document.createElement('a');
-            name.href = logo_link[j];
+            name.href = gitHub_link[j];
+            if(gitHub_link[j] === null){
+                name.title = "Sorry no repo for this tool! Click on logo to visit homepage.";
+            }
+            else{
+                name.title = "github Repo";
+            }
             name.target = "_blank"
             name.innerHTML = logo_title[j];
             name.style.textDecoration = "none"
