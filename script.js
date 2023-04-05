@@ -20,7 +20,7 @@ function searchWithDomain(){
     method:'POST',
     headers: { 
         'Content-Type': 'application/json',
-        'x-api-key': 'sLnPJervnfsXQfay7sOzYw',
+        'x-api-key': 'C0jV6TitBCVYmbdfhk8xkw',
      },
     body: JSON.stringify({
         query: `
